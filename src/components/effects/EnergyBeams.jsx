@@ -14,13 +14,15 @@ const EnergyBeams = () => {
     const ctx = canvas.getContext('2d');
     let animationFrameId;
 
-    let width = (canvas.width = canvas.parentElement.offsetWidth);
-    let height = (canvas.height = canvas.parentElement.offsetHeight);
+    const parent = canvas.parentElement || document.body;
+    let width = (canvas.width = parent ? parent.offsetWidth || window.innerWidth : 800);
+    let height = (canvas.height = parent ? parent.offsetHeight || window.innerHeight : 600);
 
     const handleResize = () => {
-      if (!canvas || !canvas.parentElement) return;
-      width = canvas.width = canvas.parentElement.offsetWidth;
-      height = canvas.height = canvas.parentElement.offsetHeight;
+      if (!canvas) return;
+      const currentParent = canvas.parentElement || document.body;
+      width = canvas.width = currentParent ? currentParent.offsetWidth || window.innerWidth : 800;
+      height = canvas.height = currentParent ? currentParent.offsetHeight || window.innerHeight : 600;
     };
     window.addEventListener('resize', handleResize);
 

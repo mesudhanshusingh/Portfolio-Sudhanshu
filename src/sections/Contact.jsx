@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import SectionHeader from '../components/SectionHeader';
-import GlassCard from '../components/GlassCard';
+import { motion } from 'framer-motion';
+import SectionHeader from '../components/ui/SectionHeader';
+import GlassCard from '../components/ui/GlassCard';
 import { personalInfo } from '../data/portfolioData';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram, Twitter, Send, CheckCircle2 } from 'lucide-react';
 
@@ -45,9 +46,11 @@ const Contact = () => {
 
                 <div className="space-y-4">
                   {/* Email */}
-                  <a
+                  <motion.a
                     href={`mailto:${personalInfo.email}`}
-                    className="flex items-start gap-4 p-3.5 rounded-xl bg-dark-950/70 border border-violet-900/30 hover:border-violet-500/60 transition-all group"
+                    whileHover={{ y: -3, scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-dark-950/70 border border-violet-900/30 hover:border-violet-500/60 hover:shadow-purple-glow-sm transition-all group cursor-pointer transform-gpu"
                   >
                     <div className="p-2.5 rounded-xl bg-violet-950 text-violet-300 border border-violet-700/50 group-hover:scale-110 transition-transform">
                       <Mail className="w-5 h-5" />
@@ -58,10 +61,13 @@ const Contact = () => {
                         {personalInfo.email}
                       </span>
                     </div>
-                  </a>
+                  </motion.a>
 
                   {/* Phone */}
-                  <div className="flex items-start gap-4 p-3.5 rounded-xl bg-dark-950/70 border border-violet-900/30">
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-dark-950/70 border border-violet-900/30 transform-gpu"
+                  >
                     <div className="p-2.5 rounded-xl bg-violet-950 text-violet-300 border border-violet-700/50">
                       <Phone className="w-5 h-5" />
                     </div>
@@ -71,10 +77,13 @@ const Contact = () => {
                         {personalInfo.phone}
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Location */}
-                  <div className="flex items-start gap-4 p-3.5 rounded-xl bg-dark-950/70 border border-violet-900/30">
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    className="flex items-start gap-4 p-3.5 rounded-xl bg-dark-950/70 border border-violet-900/30 transform-gpu"
+                  >
                     <div className="p-2.5 rounded-xl bg-violet-950 text-violet-300 border border-violet-700/50">
                       <MapPin className="w-5 h-5" />
                     </div>
@@ -84,7 +93,7 @@ const Contact = () => {
                         {personalInfo.location}
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
 
@@ -94,45 +103,53 @@ const Contact = () => {
                   Social & Developer Profiles
                 </span>
                 <div className="grid grid-cols-2 gap-3">
-                  <a
+                  <motion.a
                     href={personalInfo.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all"
+                    whileHover={{ y: -3, scale: 1.04 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all cursor-pointer transform-gpu"
                   >
                     <Github className="w-4 h-4 text-violet-400" />
                     <span>GitHub</span>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
                     href={personalInfo.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all"
+                    whileHover={{ y: -3, scale: 1.04 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all cursor-pointer transform-gpu"
                   >
                     <Linkedin className="w-4 h-4 text-violet-400" />
                     <span>LinkedIn</span>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
                     href={personalInfo.socials.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all"
+                    whileHover={{ y: -3, scale: 1.04 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all cursor-pointer transform-gpu"
                   >
                     <Instagram className="w-4 h-4 text-violet-400" />
                     <span>Instagram</span>
-                  </a>
+                  </motion.a>
 
-                  <a
+                  <motion.a
                     href={personalInfo.socials.x}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all"
+                    whileHover={{ y: -3, scale: 1.04 }}
+                    whileTap={{ scale: 0.96 }}
+                    className="flex items-center gap-2.5 p-2.5 rounded-xl bg-dark-950 border border-violet-900/40 text-xs font-semibold text-gray-300 hover:text-white hover:border-violet-500 hover:shadow-purple-glow-sm transition-all cursor-pointer transform-gpu"
                   >
                     <Twitter className="w-4 h-4 text-violet-400" />
                     <span>X (Twitter)</span>
-                  </a>
+                  </motion.a>
                 </div>
               </div>
             </GlassCard>
@@ -201,21 +218,25 @@ const Contact = () => {
                   </div>
 
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
-                    <button
+                    <motion.button
                       type="submit"
-                      className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-violet-700 to-purple-600 hover:from-violet-600 hover:to-purple-500 shadow-purple-glow transition-all duration-300 active:scale-95 cursor-pointer"
+                      whileHover={{ y: -3, scale: 1.03 }}
+                      whileTap={{ scale: 0.96 }}
+                      className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-violet-700 to-purple-600 hover:from-violet-600 hover:to-purple-500 shadow-purple-glow transition-all duration-300 cursor-pointer transform-gpu"
                     >
                       <Send className="w-4 h-4" />
                       <span>Send Message</span>
-                    </button>
+                    </motion.button>
 
-                    <a
+                    <motion.a
                       href={`mailto:${personalInfo.email}?subject=Contacting%20from%20Portfolio&body=Hi%20Sudhanshu,%0A%0A`}
-                      className="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl text-sm font-bold text-gray-200 bg-dark-950 border border-violet-800/60 hover:bg-violet-950 hover:border-violet-400 transition-all cursor-pointer"
+                      whileHover={{ y: -3, scale: 1.03 }}
+                      whileTap={{ scale: 0.96 }}
+                      className="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl text-sm font-bold text-gray-200 bg-dark-950 border border-violet-800/60 hover:bg-violet-950 hover:border-violet-400 transition-all cursor-pointer transform-gpu"
                     >
                       <Mail className="w-4 h-4 text-violet-400" />
                       <span>Email Me</span>
-                    </a>
+                    </motion.a>
                   </div>
                 </form>
               )}

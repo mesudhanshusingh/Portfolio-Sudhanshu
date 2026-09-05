@@ -4,8 +4,8 @@ const SectionHeader = ({ badge, title, subtitle }) => {
   return (
     <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 px-4 animate-fadeIn">
       {badge && (
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-violet-950/80 text-violet-300 border border-violet-700/60 mb-4 shadow-purple-glow-sm">
-          <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-purple-950/80 text-purple-300 border border-purple-500/60 mb-4 shadow-purple-glow-sm">
+          <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
           {badge}
         </span>
       )}
@@ -13,7 +13,7 @@ const SectionHeader = ({ badge, title, subtitle }) => {
         {title && title.includes(' ') ? (
           <>
             {title.split(' ').slice(0, -1).join(' ')}{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-300 to-indigo-400 drop-shadow-[0_0_20px_rgba(168,85,247,0.35)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-400 drop-shadow-[0_0_20px_rgba(168,85,247,0.4)]">
               {title.split(' ').slice(-1)}
             </span>
           </>

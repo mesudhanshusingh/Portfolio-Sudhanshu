@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SectionHeader from '../components/SectionHeader';
-import GlassCard from '../components/GlassCard';
+import SectionHeader from '../components/ui/SectionHeader';
+import GlassCard from '../components/ui/GlassCard';
 import { experienceList } from '../data/portfolioData';
 import { Calendar, Building2, CheckCircle2 } from 'lucide-react';
 

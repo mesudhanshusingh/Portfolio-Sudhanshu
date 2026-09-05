@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, MapPin, Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
-import Developer3DScene from '../components/Developer3DScene';
-import HolographicGrid from '../components/HolographicGrid';
-import EnergyBeams from '../components/EnergyBeams';
+import Developer3DScene from '../components/effects/Developer3DScene';
+import HolographicGrid from '../components/effects/HolographicGrid';
+import EnergyBeams from '../components/effects/EnergyBeams';
 
 const socialMediaRow = [
   {
@@ -58,16 +58,16 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[calc(100vh-80px)] flex flex-col justify-between pt-6 pb-12 lg:pt-10 lg:pb-16 bg-[#020204] overflow-hidden">
+    <section id="home" className="relative min-h-[calc(100vh-80px)] flex flex-col justify-between pt-6 pb-12 lg:pt-10 lg:pb-16 bg-[#030305] overflow-hidden">
       {/* Sci-Fi Holographic Grid Overlay */}
       <HolographicGrid />
 
       {/* Futuristic Plasma Energy Beams Layer */}
       <EnergyBeams />
 
-      {/* Saturated Volumetric Neon Ambient Glow Backdrops (GPU Accelerated) */}
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-600/30 rounded-full blur-[160px] pointer-events-none transform-gpu" />
-      <div className="absolute top-1/2 right-12 w-[600px] h-[600px] bg-fuchsia-600/25 rounded-full blur-[170px] pointer-events-none transform-gpu" />
+      {/* Electric Purple Volumetric Ambient Glow Backdrops */}
+      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-600/20 rounded-full blur-[180px] pointer-events-none transform-gpu" />
+      <div className="absolute top-1/2 right-12 w-[600px] h-[600px] bg-fuchsia-600/15 rounded-full blur-[170px] pointer-events-none transform-gpu" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex-grow flex flex-col justify-center">
         
@@ -84,7 +84,7 @@ const Hero = () => {
             
             {/* Small Greeting Pill with HUD Pulsing Reticle */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-purple-950/90 text-purple-300 border border-purple-500/70 shadow-purple-glow-sm mb-4">
-              <span className="w-2 h-2 rounded-full bg-fuchsia-400 animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-purple-500 animate-ping" />
               <span>👋 Hi, I'm</span>
             </motion.div>
 
@@ -92,19 +92,19 @@ const Hero = () => {
             <motion.h1 variants={itemVariants} className="text-5xl sm:text-7xl lg:text-8xl font-black font-heading tracking-tight leading-[0.95] text-white">
               SUDHANSHU
             </motion.h1>
-            <motion.h1 variants={itemVariants} className="text-5xl sm:text-7xl lg:text-8xl font-black font-heading tracking-tight leading-[0.95] mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-violet-400 to-fuchsia-400 drop-shadow-[0_0_40px_rgba(168,85,247,0.75)]">
+            <motion.h1 variants={itemVariants} className="text-5xl sm:text-7xl lg:text-8xl font-black font-heading tracking-tight leading-[0.95] mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-300 to-indigo-400 drop-shadow-[0_0_40px_rgba(168,85,247,0.6)]">
               SINGH
             </motion.h1>
 
             {/* Sub-heading */}
-            <motion.h2 variants={itemVariants} className="text-xs sm:text-sm font-extrabold font-heading text-purple-400 tracking-[0.25em] uppercase mb-4 drop-shadow-[0_0_15px_rgba(168,85,247,0.6)] flex items-center gap-2">
-              <span className="w-1.5 h-1.5 bg-purple-400 rounded-full" />
-              <span>FULL STACK DEVELOPER</span>
+            <motion.h2 variants={itemVariants} className="text-xs sm:text-sm font-extrabold font-heading text-purple-400 tracking-[0.25em] uppercase mb-4 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)] flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" />
+              <span>{personalInfo.title}</span>
             </motion.h2>
 
             {/* Concise Description */}
-            <motion.p variants={itemVariants} className="text-sm sm:text-base text-gray-200 max-w-md leading-relaxed mb-6">
-              Computer Science Engineering student passionate about building practical software solutions and solving technical problems through clean, scalable technology.
+            <motion.p variants={itemVariants} className="text-sm sm:text-base text-gray-200 max-w-md leading-relaxed mb-6 font-normal">
+              {personalInfo.bio}
             </motion.p>
 
             {/* SOCIAL ICON ROW */}
@@ -122,7 +122,7 @@ const Hero = () => {
                       whileTap={{ scale: 0.95 }}
                       className="group flex flex-col items-center gap-1.5 focus:outline-none cursor-pointer"
                     >
-                      <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#06060D]/95 border border-purple-500/60 flex items-center justify-center shadow-purple-glow-sm group-hover:border-fuchsia-400 group-hover:bg-purple-950/90 group-hover:shadow-purple-glow-lg transition-all duration-300">
+                      <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#08080d]/95 border border-purple-500/50 flex items-center justify-center shadow-purple-glow-sm group-hover:border-purple-400 group-hover:bg-purple-950/90 group-hover:shadow-purple-glow-lg transition-all duration-300">
                         <IconComp className="w-5 h-5 text-purple-400 group-hover:text-white transition-colors" />
                       </div>
                       <span className="text-[11px] font-bold text-gray-300 group-hover:text-purple-300 transition-colors">
@@ -136,25 +136,29 @@ const Hero = () => {
 
             {/* Side-by-Side CTA Buttons */}
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-              <button
+              <motion.button
                 type="button"
                 onClick={() => handleScrollTo('projects')}
-                className="relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-purple-700 via-violet-600 to-fuchsia-700 hover:from-purple-600 hover:to-fuchsia-600 shadow-purple-glow hover:shadow-purple-glow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer min-w-[170px] group"
+                whileHover={{ y: -3, scale: 1.04 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl text-sm sm:text-base font-bold text-white bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-purple-glow hover:shadow-purple-glow-lg transition-all duration-300 cursor-pointer min-w-[170px] group transform-gpu"
               >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <span className="relative z-10">View My Work</span>
-                <ArrowRight className="w-4.5 h-4.5 relative z-10" />
-              </button>
+                <ArrowRight className="w-4.5 h-4.5 relative z-10 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
 
-              <button
+              <motion.button
                 type="button"
                 onClick={() => handleScrollTo('contact')}
-                className="relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl text-sm sm:text-base font-bold text-gray-100 bg-[#06060D]/95 border border-purple-500/70 hover:bg-purple-950/90 hover:border-fuchsia-400 hover:text-white transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer min-w-[170px] group"
+                whileHover={{ y: -3, scale: 1.04 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative overflow-hidden inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl text-sm sm:text-base font-bold text-gray-100 bg-[#08080d]/95 border border-purple-500/60 hover:bg-purple-950/80 hover:border-purple-400 hover:text-white transition-all duration-300 cursor-pointer min-w-[170px] group transform-gpu"
               >
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-purple-400/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <Mail className="w-4.5 h-4.5 text-purple-400 relative z-10" />
                 <span className="relative z-10">Contact Me</span>
-              </button>
+              </motion.button>
             </motion.div>
 
           </motion.div>

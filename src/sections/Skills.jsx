@@ -1,8 +1,9 @@
 import React from 'react';
-import SectionHeader from '../components/SectionHeader';
-import GlassCard from '../components/GlassCard';
+import { motion } from 'framer-motion';
+import SectionHeader from '../components/ui/SectionHeader';
+import GlassCard from '../components/ui/GlassCard';
 import { skillCategories } from '../data/portfolioData';
-import { Code2, Server, Layout, Database, Cpu, Wrench, BarChart3, CheckCircle } from 'lucide-react';
+import { Code2, Server, Layout, Database, Cpu, Wrench, BarChart3, CheckCircle, Cloud } from 'lucide-react';
 
 const categoryIconMap = {
   Code2,
@@ -12,13 +13,14 @@ const categoryIconMap = {
   Cpu,
   Wrench,
   BarChart3,
+  Cloud,
 };
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen flex flex-col justify-center py-16 sm:py-20 relative bg-[#020204]">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-950/20 rounded-full blur-[160px] pointer-events-none" />
+    <section id="skills" className="min-h-screen flex flex-col justify-center py-16 sm:py-20 relative bg-[#030305]">
+      {/* Background ambient purple lighting */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-950/25 rounded-full blur-[170px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
@@ -34,11 +36,11 @@ const Skills = () => {
           {skillCategories.map((cat, idx) => {
             const IconComp = categoryIconMap[cat.icon] || Code2;
             return (
-              <GlassCard key={idx} className="p-6 flex flex-col justify-between">
+              <GlassCard key={idx} className="p-6 flex flex-col justify-between hover:border-purple-500/70 transition-all duration-300">
                 <div>
                   {/* Category Header */}
-                  <div className="flex items-center gap-3 mb-5 pb-3 border-b border-violet-900/30">
-                    <div className="p-2 rounded-xl bg-violet-950/80 border border-violet-700/50 text-violet-300">
+                  <div className="flex items-center gap-3 mb-5 pb-3 border-b border-purple-900/30">
+                    <div className="p-2 rounded-xl bg-purple-950/80 border border-purple-500/50 text-purple-400 shadow-purple-glow-sm">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <h3 className="text-xs sm:text-sm font-bold font-heading uppercase tracking-wider text-gray-200">
@@ -49,13 +51,15 @@ const Skills = () => {
                   {/* Skills Pills */}
                   <div className="flex flex-wrap gap-2">
                     {cat.skills.map((skill) => (
-                      <div
+                      <motion.div
                         key={skill}
-                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-medium text-gray-200 bg-dark-950/80 border border-violet-900/40 hover:border-violet-500/60 hover:text-white transition-all duration-200"
+                        whileHover={{ y: -3, scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl text-xs font-medium text-gray-200 bg-[#08080d]/90 border border-purple-900/40 hover:border-purple-500/80 hover:text-white hover:bg-purple-950/40 hover:shadow-purple-glow-sm transition-all duration-200 cursor-pointer transform-gpu"
                       >
-                        <CheckCircle className="w-3.5 h-3.5 text-violet-400 shrink-0" />
+                        <CheckCircle className="w-3.5 h-3.5 text-purple-400 shrink-0" />
                         <span>{skill}</span>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>

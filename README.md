@@ -40,32 +40,20 @@ This portfolio showcases Sudhanshu Singh's engineering projects, technical profi
 ## 📁 Project Structure
 
 ```text
-d:\Desktop\New Portfolio
+New Portfolio/
+├── scripts/                  # Asset processing & cutout scripts
 ├── public/
-│   ├── assets/               # High-res image assets & 3D cutout portraits
+│   ├── assets/               # High-res images & project mockups
+│   ├── logos/                # Certification issuer logos
+│   ├── resume/               # Resume PDF
 │   └── favicon.svg           # Website SVG favicon
 ├── src/
-│   ├── components/           # Reusable UI Components
-│   │   ├── Navbar.jsx        # Floating Island Header & Scroll Progress
-│   │   ├── GlassCard.jsx     # Sci-Fi HUD 3D Glass Card
-│   │   ├── Developer3DScene.jsx # Hero 3D Portrait & Floating Stats
-│   │   ├── EnergyBeams.jsx   # Plasma Energy Beams Canvas Layer
-│   │   ├── HolographicGrid.jsx # Sci-Fi Holographic Grid Overlay
-│   │   ├── ProjectModal.jsx  # Interactive Detailed Project Modal
-│   │   ├── ElectricCursor.jsx # Electric Spark Cursor Trail
-│   │   ├── SectionHeader.jsx # Reusable Section Titles & Badges
-│   │   ├── BackToTop.jsx     # Floating Back To Top Button
-│   │   └── Footer.jsx        # Minimal Copyright Footer
-│   ├── sections/             # Page Sections
-│   │   ├── Hero.jsx          # Futuristic Hero Opening Sequence
-│   │   ├── About.jsx         # Summary, Education & Personal Details
-│   │   ├── Skills.jsx        # Categorized Technical Proficiency
-│   │   ├── Projects.jsx      # Highlighting Key Systems & Demos
-│   │   ├── Journey.jsx       # Internship Timeline & Experience
-│   │   ├── Certifications.jsx # Verified Professional Certifications
-│   │   └── Contact.jsx       # Direct Message Form & Contact Info
-│   ├── data/
-│   │   └── portfolioData.js  # Centralized Store for Portfolio Info
+│   ├── components/           # Categorized UI Components
+│   │   ├── ui/               # Core UI (Navbar, GlassCard, CustomCursor, Footer, etc.)
+│   │   ├── effects/          # Background Canvas & 3D Lighting Effects
+│   │   └── modals/           # Project Detail Modal
+│   ├── sections/             # Main Page Sections (Hero, About, Skills, Projects, etc.)
+│   ├── data/                 # Centralized Portfolio Data
 │   ├── App.jsx               # Root Application Component
 │   ├── main.jsx              # Application Entry Point
 │   └── index.css             # Base Styles & Custom Tailwind Utilities

@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "SUDHANSHU SINGH",
   firstName: "SUDHANSHU",
   lastName: "SINGH",
-  title: "Full Stack Developer",
+  title: "Java • Spring Boot • Full-Stack Developer",
   subtitle: "Computer Science & Engineering Student",
   location: "Siwan, Bihar, India",
   region: "India / Bihar",
@@ -11,10 +11,10 @@ export const personalInfo = {
   quote: "Code. Build. Learn. Repeat.",
   avatar: "/assets/developer_character.jpg",
   resumeUrl: "/resume/Sudhanshu_Singh_Resume.pdf",
-  bio: "Computer Science Engineering student passionate about building practical software solutions and solving technical problems through clean, scalable technology.",
-  aboutDetailed: "Computer Science Engineering student with a solid foundation in programming and core computer science concepts. Interested in developing practical software solutions and applying analytical thinking to solve technical problems.",
+  bio: "Turning ideas into impactful digital experiences through code, creativity, and technology.",
+  aboutDetailed: "I’m Sudhanshu Singh, a Computer Science & Engineering student and aspiring Java & Spring Boot Developer. I enjoy building practical applications and solving real-world problems through technology. My primary focus is Java, Spring Boot, REST APIs, SQL, and full-stack development. I learn by building hands-on projects, exploring new technologies, and continuously improving my problem-solving and development skills. I’m looking forward to growing as a developer and contributing to software that is useful, reliable, and impactful.",
   stats: [
-    { label: "PROJECTS", value: "3" },
+    { label: "PROJECTS", value: "5" },
     { label: "INTERNSHIPS", value: "4" },
     { label: "CGPA", value: "8.53" },
   ],
@@ -28,12 +28,11 @@ export const personalInfo = {
 
 export const heroTechBadges = [
   { name: "Java", icon: "Code2" },
-  { name: "C++", icon: "Cpu" },
   { name: "Python", icon: "Terminal" },
   { name: "Spring Boot", icon: "Layers" },
-  { name: "React", icon: "Atom" },
-  { name: "JavaScript", icon: "FileCode2" },
+  { name: "REST APIs", icon: "Server" },
   { name: "MySQL", icon: "Database" },
+  { name: "JavaScript", icon: "FileCode2" },
   { name: "GitHub", icon: "Github" }
 ];
 
@@ -70,96 +69,145 @@ export const educationList = [
 
 export const skillCategories = [
   {
-    category: "PROGRAMMING LANGUAGES",
+    category: "PROGRAMMING LANGUAGE",
     icon: "Code2",
-    skills: ["Java", "C++", "Python"]
+    skills: ["Java"]
   },
   {
-    category: "BACKEND DEVELOPMENT",
+    category: "BACKEND",
     icon: "Server",
-    skills: ["Spring Boot", "REST APIs"]
+    skills: ["Spring Boot", "REST APIs", "Spring Data JPA"]
   },
   {
-    category: "FRONTEND DEVELOPMENT",
+    category: "FRONTEND",
     icon: "Layout",
-    skills: ["HTML5", "CSS3", "JavaScript", "React"]
+    skills: ["HTML5", "CSS3", "JavaScript"]
   },
   {
-    category: "DATABASE MANAGEMENT",
+    category: "DATABASE",
     icon: "Database",
-    skills: ["SQL", "MySQL"]
+    skills: ["MySQL", "SQL"]
   },
   {
-    category: "CORE COMPUTER SCIENCE",
+    category: "DEPLOYMENT & HOSTING",
+    icon: "Cloud",
+    skills: ["Render", "Vercel", "Netlify", "Azure", "Aiven"]
+  },
+  {
+    category: "CORE CS",
     icon: "Cpu",
     skills: ["OOP", "DSA", "DBMS", "Operating Systems", "Computer Networks"]
   },
   {
-    category: "DEVELOPMENT TOOLS",
+    category: "TOOLS",
     icon: "Wrench",
     skills: ["Git", "GitHub", "Maven", "Postman"]
-  },
-  {
-    category: "DATA & OFFICE TOOLS",
-    icon: "BarChart3",
-    skills: ["Tableau", "Microsoft Excel", "Microsoft PowerPoint", "Microsoft Word"]
   }
 ];
 
 export const projectsList = [
   {
-    id: "saferide",
-    name: "SafeRide",
-    tagline: "Women's Safety Platform",
+    id: "amburoute",
+    name: "01 — AmbuRoute — Intelligent Emergency Ambulance Navigation System",
+    tagline: "AI Healthcare & Routing Platform",
     year: "2026",
     highlight: true,
-    techStack: ["Java", "Spring Boot", "REST APIs", "MySQL", "HTML5", "CSS3", "JavaScript", "JWT"],
-    description: "Developed a full-stack women's safety platform with emergency response and location-sharing features.",
+    techStack: ["Java", "Spring Boot", "Python", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Chart.js", "REST APIs", "Git"],
+    description: "AI-powered ambulance routing platform inspired by real-world emergency healthcare challenges.",
     features: [
-      "SOS Alerts with instant notification dispatch",
-      "Live Location Sharing for real-time tracking",
-      "Emergency Recording for automated evidence logging",
-      "Community Safety Alerts for nearby hazard awareness",
-      "Emergency Coordination panel for trusted responders"
+      "Smart Route Optimization",
+      "AI Hospital Recommendation",
+      "Railway Crossing Intelligence",
+      "Green Corridor Simulation",
+      "Live Ambulance Tracking",
+      "Emergency Driver Alerts"
     ],
-    image: "/assets/saferide_mockup.jpg",
-    category: "Full Stack Platform"
-  },
-  {
-    id: "amburoute",
-    name: "AmbuRoute",
-    tagline: "Emergency Ambulance Navigation System",
-    year: "2026",
-    highlight: false,
-    techStack: ["Java", "Spring Boot", "REST APIs", "MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap 5", "Leaflet Maps"],
-    description: "Developed an ambulance routing platform for emergency route planning and hospital selection.",
-    features: [
-      "Route Optimization based on real-time traffic data",
-      "Hospital Recommendation matching medical urgency",
-      "Railway Crossing Intelligence for smart detours",
-      "Green Corridor Simulation for critical dispatch",
-      "Live Ambulance Tracking & Emergency Alerts"
-    ],
+    liveDemoUrl: "https://emergency-ambulance-navigation-system.onrender.com/#landing",
+    githubUrl: "https://github.com/mesudhanshusingh/Emergency-Ambulance-Navigation-System.git",
     image: "/assets/amburoute_mockup.jpg",
     category: "Emergency & Navigation System"
   },
   {
-    id: "upi-offline",
-    name: "UPI Without Internet",
-    tagline: "Offline UPI Payment System",
+    id: "employee-management-system",
+    name: "02 — Employee Management & Leave Tracking System",
+    tagline: "Full-Stack Enterprise Application",
+    year: "2026",
+    highlight: true,
+    techStack: ["Java", "Spring Boot", "REST APIs", "Spring Data JPA", "MySQL", "HTML5", "CSS3", "JavaScript"],
+    description: "Full-stack employee management system for managing employee records, departments, and leave requests.",
+    features: [
+      "Employee CRUD operations",
+      "Employee search",
+      "Department-based filtering",
+      "Leave application and history",
+      "Leave approval/rejection",
+      "Leave balance management",
+      "REST APIs connecting the JavaScript frontend with Spring Boot backend",
+      "Validation and exception handling"
+    ],
+    liveDemoUrl: "https://employee-management-system-oobe.onrender.com/",
+    githubUrl: "https://github.com/mesudhanshusingh/Employee-Management-System.git",
+    image: "/assets/employee_management_mockup.jpg",
+    category: "Full-Stack Enterprise Application"
+  },
+  {
+    id: "skill-based-team-allocation",
+    name: "03 — Skill-Based Student Project Team Allocation System",
+    tagline: "Algorithmic Team Allocation Platform",
     year: "2026",
     highlight: false,
-    techStack: ["Java", "Spring Boot", "REST API", "MySQL", "Maven"],
-    description: "Developed a backend-based payment system designed to support UPI transactions in low/no-internet connectivity scenarios.",
+    techStack: ["Java", "Spring Boot", "REST APIs", "Spring Data JPA", "MySQL", "HTML5", "CSS3", "JavaScript"],
+    description: "Full-stack system that manages student profiles, skills, project requirements, and team assignments.",
     features: [
-      "Backend APIs for offline payment transaction requests",
-      "Robust Transaction Processing & verification pipeline",
-      "Reliable Transaction Flow with atomicity guarantees",
-      "Low & Zero-Internet connectivity resilience focus"
+      "Student profile and skill management",
+      "Project requirement management",
+      "Skill-based matching",
+      "Rule-based matching score",
+      "Automatic team generation",
+      "Team-size handling",
+      "Skill coverage",
+      "Duplicate-student prevention"
     ],
+    liveDemoUrl: "https://skill-based-student-project-team-9yw9.onrender.com/",
+    githubUrl: "https://github.com/mesudhanshusingh/Skill-Based-Student-Project-Team-Allocation-System.git",
+    image: "/assets/team_allocation_mockup.jpg",
+    category: "Algorithmic Team Allocation Platform"
+  },
+  {
+    id: "saferide",
+    name: "04 — SafeRide — Women’s Safety Platform",
+    tagline: "AI Safety Platform",
+    year: "2026",
+    highlight: false,
+    techStack: ["Java", "Spring Boot", "Python", "FastAPI", "MySQL", "MongoDB", "HTML5", "CSS3", "JavaScript", "JWT", "REST APIs"],
+    description: "AI-powered full-stack women’s safety platform inspired by real-world safety challenges during solo travel.",
+    features: [
+      "Smart SOS Alerts",
+      "Live Location Sharing",
+      "Emergency Recording",
+      "Community Safety Alerts",
+      "Real-time emergency response system",
+      "Rapid emergency alerts and location sharing",
+      "Emergency coordination"
+    ],
+    liveDemoUrl: "https://saferide-womens-safety-platform.onrender.com/",
+    githubUrl: "https://github.com/mesudhanshusingh/SafeRide-Womens-Safety-Platform.git",
+    image: "/assets/saferide_mockup.jpg",
+    category: "Full Stack Platform"
+  },
+  {
+    id: "upi-offline",
+    name: "05 — UPI Payment Without Internet using Spring Boot",
+    tagline: "Offline FinTech Payment Solution",
+    year: "2026",
+    highlight: false,
+    techStack: ["Spring Boot"],
+    description: "UPI Payment Without Internet using Spring Boot.",
+    features: [],
+    liveDemoUrl: null,
+    githubUrl: "https://github.com/mesudhanshusingh/UPI-Without-Internet.git",
     image: "/assets/upi_offline_mockup.jpg",
-    category: "Backend & Fintech Systems",
-    note: "Personal project implementation exploring offline payment mechanics."
+    category: "Backend & Fintech Systems"
   }
 ];
 
@@ -196,27 +244,38 @@ export const experienceList = [
 
 export const certificationsList = [
   {
-    title: "Introduction to Java on Azure",
+    title: "Oracle Java Foundations: Training and Assessment",
+    issuer: "Oracle",
+    year: "2026",
+    logo: "/logos/oracle.svg",
+    badge: "Official Oracle Certification"
+  },
+  {
+    title: "Deploy a Spring Boot App to Azure Container Apps",
     issuer: "Microsoft",
     year: "2026",
-    badge: "Cloud & Java"
+    logo: "/logos/microsoft.svg",
+    badge: "Microsoft Cloud Credential"
+  },
+  {
+    title: "Oracle SQL Explorer",
+    issuer: "Oracle",
+    year: "2026",
+    logo: "/logos/oracle.svg",
+    badge: "Oracle Database Credential"
   },
   {
     title: "Data Analytics Job Simulation",
     issuer: "Deloitte Australia (Forage)",
     year: "2026",
-    badge: "Data Analytics"
+    logo: "/logos/deloitte.svg",
+    badge: "Deloitte Industry Simulation"
   },
   {
     title: "Soft Skill Development (Elite Certification)",
-    issuer: "NPTEL, IIT Kharagpur",
+    issuer: "NPTEL / IIT Kharagpur",
     year: "2026",
-    badge: "Soft Skills & Leadership"
-  },
-  {
-    title: "Introduction to Computers Training",
-    issuer: "Spoken Tutorial Project, IIT Bombay",
-    year: "2023",
-    badge: "Computer Fundamentals"
+    logo: "/logos/nptel.svg",
+    badge: "Elite Academic Honor"
   }
 ];
